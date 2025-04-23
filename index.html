@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Ticket Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Football Ticket Chatbot</h1>
+  </header>
+
+  <main>
+    <section id="countdown"></section>
+
+    <section id="match-list">
+      <h2>Upcoming Matches</h2>
+      <select id="matchFilter">
+        <option value="all">All</option>
+        <option value="vietnam">Vietnam</option>
+        <option value="thailand">Thailand</option>
+        <option value="derby">Hot Matches</option>
+      </select>
+      <div id="matches"></div>
+    </section>
+
+    <section id="ticket-booking" class="hidden">
+      <h2>Select Your Seat</h2>
+      <div id="stadium">
+        <!-- Seats grid -->
+      </div>
+      <label>Type:
+        <select id="ticketType">
+          <option value="regular">Regular - 100k</option>
+          <option value="vip">VIP - 200k</option>
+        </select>
+      </label>
+      <label>Quantity (max 4):
+        <input type="number" id="ticketQuantity" min="1" max="4" value="1" />
+      </label>
+      <div id="totalPrice">Total: 100k</div>
+      <button onclick="confirmBooking()">Confirm Booking</button>
+    </section>
+
+    <section id="confirmation" class="hidden">
+      <h2>🎉 Booking Confirmed!</h2>
+      <p>Your fake ticket has been booked!</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
